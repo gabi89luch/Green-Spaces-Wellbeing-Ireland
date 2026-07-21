@@ -164,7 +164,7 @@ Claims throughout the site link to their sources. Here's the full list:
 
 1. WHO Europe (2017). *Urban green spaces: a brief for action.* https://www.who.int/europe/publications/i/item/9789289052498
 2. WHO Europe (2021). *Green and blue spaces and mental health.* https://www.who.int/europe/publications/i/item/9789289055666
-3. White, M.P. et al. (2019). *Spending at least 120 minutes a week in nature is associated with good health and wellbeing.* Scientific Reports. https://www.nature.com/articles/s41598-019-46071-7
+3. White, M.P. et al. (2019). *Spending at least 120 minutes a week in nature is associated with good health and wellbeing.* Scientific Reports. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6675864/
 4. Hunter, M.R. et al. (2019). *Urban Nature Experiences Reduce Stress in the Context of Daily Life Based on Salivary Biomarkers.* Frontiers in Psychology. https://www.frontiersin.org/articles/10.3389/fpsyg.2019.00722/full
 5. Ulrich, R.S. (1984). *View through a window may influence recovery from surgery.* Science. https://pubmed.ncbi.nlm.nih.gov/6143402/
 6. Kuo, F.E. & Taylor, A.F. (2004). *A potential natural treatment for attention-deficit/hyperactivity disorder.* American Journal of Public Health. https://pubmed.ncbi.nlm.nih.gov/15333318/

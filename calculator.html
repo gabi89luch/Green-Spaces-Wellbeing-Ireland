@@ -133,7 +133,7 @@
                     <div class="card-body">
                         <h3>Weekly Nature Time (40%)</h3>
                         <p>
-                            This carries the most weight. A <a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">study in Scientific Reports</a> found
+                            This carries the most weight. A <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6675864/" target="_blank" rel="noopener">study in Scientific Reports</a> found
                             that at least 120 minutes a week in nature is linked to
                             better health and wellbeing. More time means a higher score,
                             up to a sensible limit.
@@ -188,6 +188,9 @@
     </section>
     </main>
 
+    <!-- ===== Scroll to Top Button ===== -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll back to top">&uarr;</button>
+
     <!-- ===== Footer ===== -->
     <footer class="site-footer">
         <div class="footer-grid">
@@ -212,7 +215,7 @@
             <div class="footer-col">
                 <h4>Resources</h4>
                 <ul>
-                    <li><a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">White et al. 2019 - 120 min/week in nature (Scientific Reports)</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6675864/" target="_blank" rel="noopener">White et al. 2019 - 120 min/week in nature (Scientific Reports)</a></li>
                     <li><a href="https://www.who.int/europe/publications/i/item/9789289052498" target="_blank" rel="noopener">WHO Europe - Urban green spaces brief</a></li>
                     <li><a href="https://sdgs.un.org/goals/goal3" target="_blank" rel="noopener">SDG 3 - Health &amp; Wellbeing</a></li>
                     <li><a href="https://sdgs.un.org/goals/goal11" target="_blank" rel="noopener">SDG 11 - Sustainable Cities</a></li>
@@ -233,9 +236,21 @@
             links.classList.toggle('open');
             toggle.classList.toggle('active');
             const expanded = links.classList.contains('open');
-            toggle.setAttribute('aria-expanded', expanded);
-        });
-    </script>
+toggle.setAttribute('aria-expanded', expanded);
+    });
+
+    const scrollTopBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('show');
+        } else {
+            scrollTopBtn.classList.remove('show');
+        }
+    });
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+</script>
 
     <!-- ===== Calculator Logic ===== -->
     <script src="calculator.js"></script>
