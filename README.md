@@ -120,9 +120,3 @@ Full credits appear on the Get Involved page of the live site and in `project-re
 | ZIP filename | `Luchian_Stackpoole_H6WD_CA2_2026.zip` |
 
 ---
-
-## Documentation
-
-- **project-report.md / project-report.pdf** - The full academic project report: page-by-page design rationale, technical implementation, wireframes, W3C and PageSpeed results (live-tested), accessibility analysis, challenges faced and how we solved them, plus full Harvard-format references. This is what gets submitted for grading.
-- **video-script.md** - A scripted walkthrough for the required 10-minute video demo.
-- **google-form-setup.md** - Step-by-step guide for creating the survey form and embedding it in `getinvolved.html`.
