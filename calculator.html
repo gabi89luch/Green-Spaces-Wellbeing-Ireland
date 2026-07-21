@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File: calculator.html
+  Page: Green Wellbeing Score Calculator
+  Student: Valentin Gabriel Luchian  (x24318230@student.ncirl.ie)
+  Topic 8 - Green Spaces and Wellbeing in Ireland (SDGs 3 & 11)
+  Group H - H6WD Web Design & Development CA2
+  Shared calculator for the group (DOM-based JavaScript)
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Answer a few questions about your green space habits and get a personal wellbeing score with tips.">
+    <meta name="keywords" content="green wellbeing calculator, nature time calculator, wellbeing score, parks Ireland, SDG 3">
+    <meta name="author" content="Valentin Gabriel Luchian">
+    <title>Wellbeing Calculator | Green Spaces Ireland</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <header class="site-header">
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.svg" alt="Green Spaces leaf logo">
+                Green Spaces Ireland
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="greenspaces.html">Green Spaces</a></li>
+                <li><a href="data.html">Data</a></li>
+                <li><a href="calculator.html" class="active">Calculator</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Page Banner ===== -->
+    <section class="page-banner">
+        <span class="sdg-badge">SDG 3 &amp; SDG 11</span>
+        <h1>Green Wellbeing Score Calculator</h1>
+        <p>How do your green space habits stack up?</p>
+    </section>
+
+    <main>
+    <section class="section">
+        <div class="container">
+            <p class="lead text-center">
+                Just answer four quick questions about how you use green spaces.
+                We'll work out your personal Green Wellbeing Score and give you
+                some tips based on where you land. Nothing gets saved &mdash; it all
+                runs in your browser.
+            </p>
+
+            <!-- ===== Calculator Box ===== -->
+            <div class="calculator-box">
+                <form id="wellbeingForm" novalidate>
+                    <!-- Input 1 -->
+                    <div class="calc-form-group">
+                        <label for="weeklyHours">1. How many hours per week do you spend
+                            in green spaces (parks, gardens, trails)?</label>
+                        <input type="number" id="weeklyHours" name="weeklyHours"
+                               min="0" max="168" step="0.5" placeholder="e.g. 4">
+                        <p class="hint">Enter a number between 0 and 168 hours.</p>
+                        <p class="calc-error" id="errorWeeklyHours"></p>
+                    </div>
+
+                    <!-- Input 2 -->
+                    <div class="calc-form-group">
+                        <label for="walkTime">2. How many minutes does it take to walk
+                            from your home to the nearest green space?</label>
+                        <input type="number" id="walkTime" name="walkTime"
+                               min="0" max="120" step="1" placeholder="e.g. 10">
+                        <p class="hint">Enter a number between 0 and 120 minutes.</p>
+                        <p class="calc-error" id="errorWalkTime"></p>
+                    </div>
+
+                    <!-- Input 3 -->
+                    <div class="calc-form-group">
+                        <label for="visits">3. How many times per month do you visit
+                            a park, garden or natural green area?</label>
+                        <input type="number" id="visits" name="visits"
+                               min="0" max="100" step="1" placeholder="e.g. 8">
+                        <p class="hint">Enter a number between 0 and 100 visits.</p>
+                        <p class="calc-error" id="errorVisits"></p>
+                    </div>
+
+                    <!-- Input 4 -->
+                    <div class="calc-form-group">
+                        <label for="outdoorActivity">4. How many days per week do you do
+                            outdoor physical activity (walking, running, cycling)?</label>
+                        <input type="number" id="outdoorActivity" name="outdoorActivity"
+                               min="0" max="7" step="1" placeholder="e.g. 3">
+                        <p class="hint">Enter a number between 0 and 7 days.</p>
+                        <p class="calc-error" id="errorOutdoorActivity"></p>
+                    </div>
+
+                    <div style="text-align:center;">
+                        <button type="submit" class="btn btn-primary">Calculate My Score</button>
+                        <button type="reset" class="btn btn-outline"
+                                style="border-color: var(--green-700); color: var(--green-700);">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+
+                <!-- ===== Result (written by JS) ===== -->
+                <div class="calc-result" id="resultBox">
+                    <span class="score" id="resultScore">0</span>
+                    <p class="rating-label" id="resultLabel"></p>
+                    <p id="resultMessage"></p>
+                    <ul class="tips" id="resultTips"></ul>
+                </div>
+            </div>
+
+            <!-- ===== How it works ===== -->
+            <h2 style="margin-top: 3rem;" class="text-center">How the Score Works</h2>
+            <p class="lead text-center">
+                We take your four answers and weight them to get a score out of 100.
+                Here's roughly how it breaks down.
+            </p>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Weekly Nature Time (40%)</h3>
+                        <p>
+                            This carries the most weight. A <a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">study in Scientific Reports</a> found
+                            that at least 120 minutes a week in nature is linked to
+                            better health and wellbeing. More time means a higher score,
+                            up to a sensible limit.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>How Close You Live (25%)</h3>
+                        <p>
+                            SDG 11 says people should have a green space within about
+                            300 metres of home. That's roughly a 5-minute walk. The
+                            closer you are, the more likely you are to use it regularly.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>How Often You Go (20%)</h3>
+                        <p>
+                            Going once a month is better than nothing, but getting out
+                            a few times a week is what really makes a difference. We
+                            reward frequency more than one-off visits.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-body">
+                        <h3>Outdoor Activity (15%)</h3>
+                        <p>
+                            Doing something physical outside means you get the benefit
+                            of exercise and nature at the same time. Each active day
+                            bumps your score up a bit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>Want a Higher Score?</h2>
+                <p>Find a green space near you and see what communities around
+                   Ireland are doing to make the most of nature.</p>
+                <a href="greenspaces.html" class="btn btn-primary">Find Green Spaces</a>
+                <a href="benefits.html" class="btn btn-outline">See the Benefits</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Green Spaces Ireland</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size:0.9rem;">
+                    A student project on sustainability and wellbeing,
+                    linked to UN SDGs 3 &amp; 11.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="greenspaces.html">Green Spaces</a></li>
+                    <li><a href="data.html">Data</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">White et al. 2019 &mdash; 120 min/week in nature (Scientific Reports)</a></li>
+                    <li><a href="https://www.who.int/europe/publications/i/item/9789289052498" target="_blank" rel="noopener">WHO Europe &mdash; Urban green spaces brief</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal3" target="_blank" rel="noopener">SDG 3 &mdash; Health &amp; Wellbeing</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal11" target="_blank" rel="noopener">SDG 11 &mdash; Sustainable Cities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Group H &mdash; Valentin Gabriel Luchian &amp; Jamie Stackpoole.
+               H6WD Web Design &amp; Development CA2. National College of Ireland.</p>
+        </div>
+    </footer>
+
+    <!-- ===== Mobile Nav Script ===== -->
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('#navLinks');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.classList.toggle('active');
+            const expanded = links.classList.contains('open');
+            toggle.setAttribute('aria-expanded', expanded);
+        });
+    </script>
+
+    <!-- ===== Calculator Logic ===== -->
+    <script src="calculator.js"></script>
+</body>
+</html>
