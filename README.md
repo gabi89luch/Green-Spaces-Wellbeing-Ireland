@@ -1,6 +1,6 @@
 # Green Spaces & Wellbeing in Ireland
 
-A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, and a JavaScript wellbeing score calculator. Built for **H6WD Web Design & Development CA2** at National College of Ireland.
+A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, and a JavaScript wellbeing score calculator. Built for **Web Design & Development CA2** at National College of Ireland.
 
 **Topic 8** | **UN SDGs 3 & 11** | **Group H**
 
@@ -23,8 +23,8 @@ We picked this topic because it's something we both care about - both of us spen
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Valentin Gabriel Luchian | x24318230 | Home, Data & Statistics, Wellbeing Calculator |
-| Jamie Stackpoole | x25130340 | Benefits, Green Spaces, Get Involved |
+| Valentin Gabriel Luchian | 24318230 | Home, Data & Statistics, Wellbeing Calculator |
+| Jamie Stackpoole | 25130340 | Benefits, Green Spaces, Get Involved |
 
 ---
 
@@ -101,8 +101,6 @@ All photographs are from **Wikimedia Commons** under Creative Commons or Public 
 | Croke Park | Metro Centric (Flickr) | CC BY 2.0 |
 | St Stephen's Green bench | Mrdalton92 | CC BY-SA 4.0 |
 
-Full credits appear on the Get Involved page of the live site and in `project-report.md`.
-
 ---
 
 ## Tech Stack
@@ -114,22 +112,3 @@ Full credits appear on the Get Involved page of the live site and in `project-re
 - No frameworks, no build tools, no dependencies
 
 ---
-
-## Submission Info
-
-| | |
-|---|---|
-| Module | H6WD Web Design & Development |
-| Assessment | CA2 Group Project (50%) |
-| Lecturer | Sobia Bano |
-| Submission date | 4 August 2026 |
-| Viva date | 6 August 2026 (in-person, NCI) |
-| ZIP filename | `Luchian_Stackpoole_H6WD_CA2_2026.zip` |
-
----
-
-## Documentation
-
-- **project-report.md / project-report.pdf** - The full academic project report: page-by-page design rationale, technical implementation, wireframes, W3C and PageSpeed results (live-tested), accessibility analysis, challenges faced and how we solved them, plus full Harvard-format references. This is what gets submitted for grading.
-- **video-script.md** - A scripted walkthrough for the required 10-minute video demo.
-- **google-form-setup.md** - Step-by-step guide for creating the survey form and embedding it in `getinvolved.html`.
