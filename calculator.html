@@ -5,7 +5,7 @@
   Page: Green Wellbeing Score Calculator
   Student: Valentin Gabriel Luchian  (x24318230@student.ncirl.ie)
   Topic 8 - Green Spaces and Wellbeing in Ireland (SDGs 3 & 11)
-  Group H - Web Design & Development CA2
+  Group H
   Shared calculator for the group (DOM-based JavaScript)
 -->
 <head>
@@ -17,6 +17,7 @@
     <title>Wellbeing Calculator | Green Spaces Ireland</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scroll-top.js" defer></script>
 </head>
 <body>
 
@@ -225,7 +226,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Group H - Valentin Gabriel Luchian &amp; Jamie Stackpoole.
-               H6WD Web Design &amp; Development CA2. National College of Ireland.</p>
+               Web Design &amp; Development CA2. National College of Ireland.</p>
         </div>
     </footer>
 
@@ -238,18 +239,6 @@
             toggle.classList.toggle('active');
             const expanded = links.classList.contains('open');
 toggle.setAttribute('aria-expanded', expanded);
-    });
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 

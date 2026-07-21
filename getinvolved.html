@@ -16,6 +16,7 @@
     <title>Get Involved | Green Spaces Ireland</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scroll-top.js" defer></script>
 </head>
 <body>
 
@@ -159,7 +160,7 @@
                 We'd really like to hear about your relationship with green spaces.
                 How often do you go? What's your local park like? It takes less than
                 3 minutes and your answers help us understand the picture across Ireland.
-                If survey doesnt appear please click this link 
+                If survey doesnt appear please click this link
                 <a href="https://docs.google.com/forms/d/1IUwlZf1oc671wGWWI7PGCB_DgnAY302o0EBJVBuHs1k/" target="_blank" rel="noopener">Survey</a>
             </p>
 
@@ -343,7 +344,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Group H - Valentin Gabriel Luchian &amp; Jamie Stackpoole.
-               H6WD Web Design &amp; Development CA2. National College of Ireland.</p>
+               Web Design &amp; Development CA2. National College of Ireland.</p>
         </div>
     </footer>
 
@@ -356,18 +357,6 @@
             toggle.classList.toggle('active');
             const expanded = links.classList.contains('open');
 toggle.setAttribute('aria-expanded', expanded);
-    });
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>

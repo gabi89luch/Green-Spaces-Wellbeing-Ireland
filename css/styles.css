@@ -1,7 +1,7 @@
 /* ============================================================
    Green Spaces and Wellbeing in Ireland - Shared Stylesheet
    Topic 8 | SDGs 3 and 11
-   Group H | H6WD Web Design & Development CA2
+   Group H | Web Design & Development CA2
    ------------------------------------------------------------
    Student: Valentin Gabriel Luchian  - Base layout, navigation,
             hero sections, calculator, data table, footer, variables
@@ -451,6 +451,15 @@ li { margin-bottom: 0.4rem; }
    =========================== */
 .table-wrapper {
     overflow-x: auto;
+}
+
+.table-caption {
+    caption-side: top;
+    text-align: left;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-heading);
+    color: var(--green-900);
+}
     margin: 2rem 0;
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-sm);

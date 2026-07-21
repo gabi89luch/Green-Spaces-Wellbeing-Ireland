@@ -5,7 +5,7 @@
   Page: Green Spaces in Ireland
   Student: Jamie Stackpoole  (x25130340@student.ncirl.ie)
   Topic 8 - Green Spaces and Wellbeing in Ireland (SDGs 3 & 11)
-  Group H - Web Design & Development CA2
+  Group H
 -->
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
     <title>Green Spaces in Ireland | Green Spaces Ireland</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scroll-top.js" defer></script>
 </head>
 <body>
 
@@ -224,19 +225,19 @@
         <h2 class="sr-only" id="stats-heading">Green space statistics for Ireland</h2>
         <div class="stat-item">
             <span class="stat-number">6</span>
-            <span class="stat-label">National Parks in Ireland <a href="https://www.npws.ie/national-parks" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.75rem;">[source]</a></span>
+            <span class="stat-label">National Parks in Ireland <a href="https://www.npws.ie/national-parks" target="_blank" rel="noopener">[source]</a></span>
         </div>
         <div class="stat-item">
             <span class="stat-number">200+</span>
-            <span class="stat-label">community gardens around the country <a href="https://cgireland.org/" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.75rem;">[source]</a></span>
+            <span class="stat-label">community gardens around the country <a href="https://cgireland.org/" target="_blank" rel="noopener">[source]</a></span>
         </div>
         <div class="stat-item">
             <span class="stat-number">1,000+ km</span>
-            <span class="stat-label">of greenway trails to walk or cycle <a href="https://www.gov.ie/en/department-of-transport/publications/strategy-for-the-future-development-of-national-and-regional-greenways/" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.75rem;">[source]</a></span>
+            <span class="stat-label">of greenway trails to walk or cycle <a href="https://www.gov.ie/en/department-of-transport/publications/strategy-for-the-future-development-of-national-and-regional-greenways/" target="_blank" rel="noopener">[source]</a></span>
         </div>
         <div class="stat-item">
             <span class="stat-number">11%</span>
-            <span class="stat-label">of Ireland is covered by forest <a href="https://www.gov.ie/en/collection/15b56-forest-statistics-and-mapping/" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.75rem;">[source]</a></span>
+            <span class="stat-label">of Ireland is covered by forest <a href="https://www.gov.ie/en/collection/15b56-forest-statistics-and-mapping/" target="_blank" rel="noopener">[source]</a></span>
         </div>
     </section>
 
@@ -292,7 +293,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Group H - Valentin Gabriel Luchian &amp; Jamie Stackpoole.
-               H6WD Web Design &amp; Development CA2. National College of Ireland.</p>
+               Web Design &amp; Development CA2. National College of Ireland.</p>
         </div>
     </footer>
 
@@ -305,18 +306,6 @@
             toggle.classList.toggle('active');
             const expanded = links.classList.contains('open');
 toggle.setAttribute('aria-expanded', expanded);
-    });
-
-    const scrollTopBtn = document.getElementById('scrollTop');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            scrollTopBtn.classList.add('show');
-        } else {
-            scrollTopBtn.classList.remove('show');
-        }
-    });
-    scrollTopBtn.addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>

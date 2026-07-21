@@ -1,6 +1,6 @@
 # Green Spaces & Wellbeing in Ireland
 
-A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, and a JavaScript wellbeing score calculator. Built for **Web Design & Development CA2** at National College of Ireland.
+A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, two JavaScript files (calculator + scroll-to-top), and WebP images. Built for **Web Design & Development CA2** at National College of Ireland.
 
 **Topic 8** | **UN SDGs 3 & 11** | **Group H**
 
@@ -23,8 +23,8 @@ We picked this topic because it's something we both care about - both of us spen
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Valentin Gabriel Luchian | 24318230 | Home, Data & Statistics, Wellbeing Calculator |
-| Jamie Stackpoole | 25130340 | Benefits, Green Spaces, Get Involved |
+| Valentin Gabriel Luchian | x24318230 | Home, Data & Statistics, Wellbeing Calculator |
+| Jamie Stackpoole | x25130340 | Benefits, Green Spaces, Get Involved |
 
 ---
 
@@ -35,8 +35,10 @@ We picked this topic because it's something we both care about - both of us spen
 - Responsive design using Flexbox and CSS Grid, with a hamburger menu on mobile
 - JavaScript calculator using DOM manipulation with input validation, no page reload
 - YouTube video and Google Form embedded via iframes on the Get Involved page
+- Scroll-to-top button on every page (fades in past 300px scroll)
 - Working navigation across all 6 pages with active page highlighting
 - Google Fonts (Poppins for headings, Inter for body text)
+- WebP images with lazy loading and explicit dimensions
 - Source links inline throughout, full reference list in the project report
 
 ---
@@ -51,17 +53,25 @@ Green-Spaces-Wellbeing-Ireland/
 ├── data.html               Data & statistics
 ├── calculator.html         Wellbeing calculator
 ├── getinvolved.html        Get involved (YouTube + Google Form)
-├── styles.css              Shared stylesheet (single file)
-├── styles-jamie.css        Split version for separate commits
-├── styles-valentin.css     Split version for separate commits
-├── calculator.js           Calculator logic (DOM-based)
-├── README.md               This file
+├── css/
+│   └── styles.css          Shared stylesheet (single file)
+├── js/
+│   ├── calculator.js       Calculator logic (DOM-based)
+│   └── scroll-top.js       Back-to-top button behaviour
+├── images/                 12 Wikimedia Commons WebP photos + 5 custom SVGs
+└── README.md               This file
+```
+
+Documentation and assets (outside the project folder):
+
+```
+parent-folder/
 ├── project-report.md       Academic project report
 ├── project-report.pdf      Same report as PDF
 ├── video-script.md         Script for the 10-min video demo
 ├── google-form-setup.md    Guide for embedding the survey
-├── screenshots/            W3C + PageSpeed screenshots and wireframes
-└── images/                 12 Wikimedia Commons photos + 5 custom SVGs
+└── screenshots/            W3C + PageSpeed screenshots and wireframes
+    └── wireframes/         Desktop + mobile wireframes for all 6 pages
 ```
 
 ---
@@ -84,7 +94,7 @@ Deployed and live at: https://gabi89luch.github.io/Green-Spaces-Wellbeing-Irelan
 
 ## Image Credits
 
-All photographs are from **Wikimedia Commons** under Creative Commons or Public Domain licenses. The logo and benefit icons are original work by Group H.
+All photographs are from **Wikimedia Commons** under Creative Commons or Public Domain licenses, served as WebP. The logo and benefit icons are original work by Group H.
 
 | Image | Photographer | License |
 |-------|-------------|---------|
@@ -101,14 +111,39 @@ All photographs are from **Wikimedia Commons** under Creative Commons or Public 
 | Croke Park | Metro Centric (Flickr) | CC BY 2.0 |
 | St Stephen's Green bench | Mrdalton92 | CC BY-SA 4.0 |
 
+Full credits appear on the Get Involved page of the live site and in `project-report.md`.
+
 ---
 
 ## Tech Stack
 
 - HTML5
 - CSS3 (Flexbox, CSS Grid, custom properties, media queries)
-- Vanilla JavaScript (DOM manipulation, form validation, event listeners)
+- Vanilla JavaScript - two separate files:
+  - `calculator.js` - DOM manipulation, form validation, score calculation
+  - `scroll-top.js` - back-to-top button show/hide + smooth scroll
+- WebP images (smaller than JPG equivalents, ~30% size reduction)
 - Google Fonts (Poppins, Inter)
 - No frameworks, no build tools, no dependencies
 
 ---
+
+## Submission Info
+
+| | |
+|---|---|
+| Module | Web Design & Development |
+| Assessment | CA2 Group Project (50%) |
+| Lecturer | Sobia Bano |
+| Submission date | 4 August 2026 |
+| Viva date | 6 August 2026 (in-person, NCI) |
+| ZIP filename | `Luchian_Stackpoole_CA2_2026.zip` |
+
+---
+
+## Documentation
+
+- **project-report.md / project-report.pdf** - The full academic project report: page-by-page design rationale, technical implementation, wireframes, W3C and PageSpeed results (live-tested), accessibility analysis, challenges faced and how we solved them, plus full Harvard-format references. This is what gets submitted for grading.
+- **video-script.md** - A scripted walkthrough for the required 10-minute video demo.
+- **google-form-setup.md** - Step-by-step guide for creating the survey form and embedding it in `getinvolved.html`.
+- **screenshots/** - W3C validation screenshots, PageSpeed Insights screenshots, and wireframes for desktop + mobile.
