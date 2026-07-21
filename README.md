@@ -1,6 +1,6 @@
 # Green Spaces & Wellbeing in Ireland
 
-A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, and a JavaScript wellbeing score calculator. Built for **Web Design & Development CA2** at National College of Ireland.
+A multi-page website exploring how green spaces across Ireland affect our health and communities. Six HTML pages, a shared CSS file, and a JavaScript wellbeing score calculator. Built for **H6WD Web Design & Development CA2** at National College of Ireland.
 
 **Topic 8** | **UN SDGs 3 & 11** | **Group H**
 
@@ -52,8 +52,15 @@ Green-Spaces-Wellbeing-Ireland/
 ├── calculator.html         Wellbeing calculator
 ├── getinvolved.html        Get involved (YouTube + Google Form)
 ├── styles.css              Shared stylesheet (single file)
+├── styles-jamie.css        Split version for separate commits
+├── styles-valentin.css     Split version for separate commits
 ├── calculator.js           Calculator logic (DOM-based)
 ├── README.md               This file
+├── project-report.md       Academic project report
+├── project-report.pdf      Same report as PDF
+├── video-script.md         Script for the 10-min video demo
+├── google-form-setup.md    Guide for embedding the survey
+├── screenshots/            W3C + PageSpeed screenshots and wireframes
 └── images/                 12 Wikimedia Commons photos + 5 custom SVGs
 ```
 
@@ -120,3 +127,9 @@ Full credits appear on the Get Involved page of the live site and in `project-re
 | ZIP filename | `Luchian_Stackpoole_H6WD_CA2_2026.zip` |
 
 ---
+
+## Documentation
+
+- **project-report.md / project-report.pdf** - The full academic project report: page-by-page design rationale, technical implementation, wireframes, W3C and PageSpeed results (live-tested), accessibility analysis, challenges faced and how we solved them, plus full Harvard-format references. This is what gets submitted for grading.
+- **video-script.md** - A scripted walkthrough for the required 10-minute video demo.
+- **google-form-setup.md** - Step-by-step guide for creating the survey form and embedding it in `getinvolved.html`.

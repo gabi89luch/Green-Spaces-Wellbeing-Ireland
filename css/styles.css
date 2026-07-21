@@ -105,11 +105,22 @@ p { margin-bottom: 1rem; }
 
 a {
     color: var(--green-700);
-    text-decoration: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
     transition: color var(--transition);
 }
 
 a:hover { color: var(--green-500); }
+
+/* Nav, footer, buttons: no underline (handled by their own backgrounds/colors) */
+.nav-logo, .nav-links a, .footer-col a, .btn, .stat-label a {
+    text-decoration: none;
+}
+
+/* Source links inside body text still get an underline for distinguishability */
+p a, li a, .callout a, .lead a, h3 a {
+    text-decoration: underline;
+}
 
 img {
     max-width: 100%;
@@ -155,7 +166,7 @@ li { margin-bottom: 0.4rem; }
 
 .lead {
     font-size: 1.2rem;
-    color: var(--grey-500);
+    color: var(--grey-700);
     max-width: 700px;
     margin: 0 auto 2rem;
 }
@@ -281,7 +292,7 @@ li { margin-bottom: 0.4rem; }
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('images/hero-park.jpg');
+    background-image: url('images/hero-park.webp');
     background-size: cover;
     background-position: center;
     opacity: 0.35;
@@ -684,7 +695,13 @@ tfoot td {
 
 .stat-item .stat-label {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.stat-item .stat-label a {
+    color: #ffd966;
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
 

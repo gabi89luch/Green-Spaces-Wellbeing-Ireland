@@ -19,7 +19,7 @@
     <meta name="author" content="Jamie Stackpoole">
     <title>Get Involved | Green Spaces Ireland</title>
     <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
@@ -119,16 +119,11 @@
                 and what time in nature can do for you.
             </p>
 
-            <!--
-                YouTube iframe embed.
-                Replace the video ID "ScmK_kFQDlU" below with your chosen video ID.
-                To find the ID: open a YouTube video and copy the text after "v="
-                in the URL (e.g. youtube.com/watch?v=VIDEO_ID_HERE).
-            -->
+            <!-- YouTube embed: replace VIDEO_ID with a real 11-char video ID -->
             <div class="embed-wrapper">
                 <iframe
-                    src="https://www.youtube.com/embed/ScmK_kFQDlU"
-                    title="The benefits of spending time in green spaces"
+                    src="https://www.youtube.com/embed/VIDEO_ID"
+                    title="Video about green spaces and wellbeing"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen>
                 </iframe>
@@ -157,7 +152,7 @@
                     </ul>
                 </div>
                 <div class="col">
-                    <img src="images/park-2.jpg"
+                    <img width="2048" height="1536" loading="lazy" src="images/park-2.webp"
                          alt="Merrion Square Park, Dublin, a peaceful green park with trees and paths" title="Merrion Square Park by MaRiA-89, CC BY 3.0, Wikimedia Commons">
                 </div>
             </div>
@@ -174,19 +169,20 @@
                 3 minutes and your answers help us understand the picture across Ireland.
             </p>
 
-            <!--
-                Google Form iframe embed.
-                Replace the form ID "1FAIpQLSc_PLACEHOLDER_xxxxxx" in the src below
-                with your own Google Form ID. To get this: open your Google Form,
-                click "Send", choose the embed icon "< >", and copy the src URL.
-            -->
+            <!-- Google Form embed: replace FORM_ID with the real form ID -->
+<!-- See google-form-setup.md in the project folder for instructions -->
             <div class="form-wrapper">
                 <iframe
-                    src="https://docs.google.com/forms/d/e/1FAIpQLSc_PLACEHOLDER_xxxxxx/viewform?embedded=true"
-                    title="Green Spaces and Wellbeing Survey"></iframe>
+                    src="https://docs.google.com/forms/d/e/FORM_ID/viewform?embedded=true"
+                    title="Green Spaces and Wellbeing Survey"
+                    width="100%"
+                    height="800"
+                    frameborder="0"
+                    marginheight="0"
+                    marginwidth="0">Loading…</iframe>
                 <p class="text-center" style="padding: 2rem;">
                     If the survey doesn't load, you can
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_PLACEHOLDER_xxxxxx/viewform" target="_blank" rel="noopener">open it in a new tab</a>.
+                    <a href="https://docs.google.com/forms/d/e/FORM_ID/viewform" target="_blank" rel="noopener">open it in a new tab</a>.
                 </p>
             </div>
 
