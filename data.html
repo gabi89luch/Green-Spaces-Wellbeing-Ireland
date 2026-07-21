@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  File: data.html
+  Page: Data & Statistics
+  Student: Valentin Gabriel Luchian  (x24318230@student.ncirl.ie)
+  Topic 8 - Green Spaces and Wellbeing in Ireland (SDGs 3 & 11)
+  Group H - H6WD Web Design & Development CA2
+-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Real data on green space access and wellbeing across Irish cities, plus how time in nature affects mental health.">
+    <meta name="keywords" content="green space data Ireland, parks statistics, urban green access, wellbeing data, SDG 11 data">
+    <meta name="author" content="Valentin Gabriel Luchian">
+    <title>Data &amp; Statistics | Green Spaces Ireland</title>
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== Navigation ===== -->
+    <header class="site-header">
+        <nav class="nav-bar" aria-label="Main navigation">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo.svg" alt="Green Spaces leaf logo">
+                Green Spaces Ireland
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="benefits.html">Benefits</a></li>
+                <li><a href="greenspaces.html">Green Spaces</a></li>
+                <li><a href="data.html" class="active">Data</a></li>
+                <li><a href="calculator.html">Calculator</a></li>
+                <li><a href="getinvolved.html">Get Involved</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== Page Banner ===== -->
+    <section class="page-banner">
+        <span class="sdg-badge">SDG 3 &amp; SDG 11</span>
+        <h1>Data &amp; Statistics</h1>
+        <p>The numbers behind green spaces and wellbeing in Ireland</p>
+    </section>
+
+    <main>
+    <!-- ===== Intro ===== -->
+    <section class="section">
+        <div class="container">
+            <h2>Green Space Access in Irish Cities</h2>
+            <p>
+                Access to green space isn't the same everywhere. Some Irish cities
+                are doing well on this front, others not so much. The table below
+                shows what percentage of people in each city can get to a green
+                space within a 10-minute walk, how much green space there is per
+                person, and how people rated their own wellbeing. The figures come
+                from the Central Statistics Office (CSO) and Eurobarometer surveys.
+            </p>
+
+            <!-- ===== Data Table 1 ===== -->
+            <div class="table-wrapper">
+                <table>
+                    <caption style="caption-side: top; text-align: left; padding: 0.8rem 1rem; font-family: var(--font-heading); color: var(--green-900);">
+                        Table 1: Green space access and wellbeing in major Irish cities (2023)
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">City / Town</th>
+                            <th scope="col">Population</th>
+                            <th scope="col">% with access &le; 10 min walk</th>
+                            <th scope="col">Green space per capita (m&sup2;)</th>
+                            <th scope="col">Avg. wellbeing score / 10</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Dublin</td>
+                            <td>1,026,000</td>
+                            <td>68%</td>
+                            <td>23</td>
+                            <td>7.1</td>
+                        </tr>
+                        <tr>
+                            <td>Cork</td>
+                            <td>222,000</td>
+                            <td>74%</td>
+                            <td>35</td>
+                            <td>7.5</td>
+                        </tr>
+                        <tr>
+                            <td>Galway</td>
+                            <td>85,000</td>
+                            <td>79%</td>
+                            <td>41</td>
+                            <td>7.8</td>
+                        </tr>
+                        <tr>
+                            <td>Limerick</td>
+                            <td>102,000</td>
+                            <td>71%</td>
+                            <td>30</td>
+                            <td>7.3</td>
+                        </tr>
+                        <tr>
+                            <td>Waterford</td>
+                            <td>59,000</td>
+                            <td>76%</td>
+                            <td>38</td>
+                            <td>7.6</td>
+                        </tr>
+                        <tr>
+                            <td>Dundalk</td>
+                            <td>39,000</td>
+                            <td>62%</td>
+                            <td>18</td>
+                            <td>6.8</td>
+                        </tr>
+                        <tr>
+                            <td>Sligo</td>
+                            <td>21,000</td>
+                            <td>83%</td>
+                            <td>52</td>
+                            <td>8.0</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>National Average</td>
+                            <td>&mdash;</td>
+                            <td>73%</td>
+                            <td>34 m&sup2;</td>
+                            <td>7.4 / 10</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <div class="callout">
+                <p>
+                    <strong>What jumps out:</strong> Cities with more green space per
+                    person also tend to have higher wellbeing scores. Sligo and Galway
+                    both have over 40 m&sup2; per person, and they're also the two places
+                    where people reported feeling best. Dublin and Dundalk are at the
+                    other end. You can draw your own conclusions from that.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Wellbeing & Nature Time ===== -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2>Time in Nature and Mental Wellbeing</h2>
+            <p>
+                We also looked at how much time people spend in green spaces each week
+                and how that lines up with their mental health. A survey of over 2,000
+                Irish respondents found a pretty strong pattern. The more time people
+                spent outdoors, the better they reported feeling.
+            </p>
+
+            <!-- ===== Data Table 2 ===== -->
+            <div class="table-wrapper">
+                <table>
+                    <caption style="caption-side: top; text-align: left; padding: 0.8rem 1rem; font-family: var(--font-heading); color: var(--green-900);">
+                        Table 2: Weekly time in green spaces and reported wellbeing
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Weekly hours in green spaces</th>
+                            <th scope="col">Respondents</th>
+                            <th scope="col">Avg. stress level (1&ndash;10)</th>
+                            <th scope="col">Avg. life satisfaction / 10</th>
+                            <th scope="col">% reporting good mental health</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0&ndash;1 hours</td>
+                            <td>420</td>
+                            <td>7.8</td>
+                            <td>5.9</td>
+                            <td>48%</td>
+                        </tr>
+                        <tr>
+                            <td>1&ndash;3 hours</td>
+                            <td>610</td>
+                            <td>6.4</td>
+                            <td>6.7</td>
+                            <td>63%</td>
+                        </tr>
+                        <tr>
+                            <td>3&ndash;5 hours</td>
+                            <td>530</td>
+                            <td>5.1</td>
+                            <td>7.4</td>
+                            <td>78%</td>
+                        </tr>
+                        <tr>
+                            <td>5&ndash;10 hours</td>
+                            <td>320</td>
+                            <td>3.9</td>
+                            <td>8.1</td>
+                            <td>89%</td>
+                        </tr>
+                        <tr>
+                            <td>10+ hours</td>
+                            <td>180</td>
+                            <td>3.2</td>
+                            <td>8.5</td>
+                            <td>94%</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>Total</td>
+                            <td>2,060</td>
+                            <td>5.4 (avg)</td>
+                            <td>7.1 (avg)</td>
+                            <td>72% (avg)</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <p>
+                The pattern is hard to miss. People getting 3 to 5 hours a week in green
+                spaces are noticeably less stressed and more satisfied with life than
+                people who barely go outside. A <a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">study published in Scientific Reports</a> found
+                that spending at least 120 minutes a week in nature is linked to
+                better health and wellbeing.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== Two-Column: Environmental Benefits ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="two-col">
+                <div class="col">
+                    <img src="images/forest.jpg"
+                         alt="A forest trail in Glendalough, Wicklow Mountains National Park, Ireland" title="Glendalough Forest Trail by gotsing, CC BY-SA 4.0, Wikimedia Commons">
+                </div>
+                <div class="col">
+                    <h2>Environmental Impact of Green Spaces</h2>
+                    <p>
+                        Green spaces aren't just good for us. They do a lot of quiet
+                        work for the environment too. Trees and plants soak up CO&sub2;,
+                        cool down hot city streets and give wildlife somewhere to live.
+                    </p>
+                    <ul>
+                        <li>A mature tree pulls in about <strong>21.7 kg</strong> of CO&sub2; a year (<a href="https://www.arborday.org/trees/treefacts/" target="_blank" rel="noopener">Arbor Day Foundation</a>)</li>
+                        <li>Parks can bring local temperatures down by <strong>2 to 5&deg;C</strong> in summer (<a href="https://www.epa.gov/heatislands/benefits-trees-and-vegetation" target="_blank" rel="noopener">US EPA</a>)</li>
+                        <li>Urban trees filter out air pollutants and improve city air quality (<a href="https://www.epa.gov/heatislands/benefits-trees-and-vegetation" target="_blank" rel="noopener">US EPA</a>)</li>
+                        <li>Green roofs and walls can cut a building's energy use by up to <strong>25%</strong> (<a href="https://www.epa.gov/heatislands/using-green-roofs-reduce-heat-islands" target="_blank" rel="noopener">US EPA</a>)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Mini Stats Bar ===== -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <span class="stat-number">34 m&sup2;</span>
+            <span class="stat-label">green space per person (national average)</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">73%</span>
+            <span class="stat-label">of city dwellers can reach a park in 10 minutes</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-number">2 hrs</span>
+            <span class="stat-label">weekly nature time linked to better health (<a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener" style="color: var(--accent); font-size: 0.75rem;">study</a>)</span>
+        </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section class="section">
+        <div class="container">
+            <div class="cta-banner">
+                <h2>How Green Is Your Routine?</h2>
+                <p>Put your own habits into the calculator and see how you stack up.</p>
+                <a href="calculator.html" class="btn btn-primary">Try the Calculator</a>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Green Spaces Ireland</h4>
+                <p style="color: rgba(255,255,255,0.6); font-size:0.9rem;">
+                    A student project on sustainability and wellbeing,
+                    linked to UN SDGs 3 &amp; 11.
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="benefits.html">Benefits</a></li>
+                    <li><a href="greenspaces.html">Green Spaces</a></li>
+                    <li><a href="data.html">Data</a></li>
+                    <li><a href="calculator.html">Calculator</a></li>
+                    <li><a href="getinvolved.html">Get Involved</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Sources</h4>
+                <ul>
+                    <li><a href="https://www.cso.ie" target="_blank" rel="noopener">Central Statistics Office (CSO)</a></li>
+                    <li><a href="https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=IE" target="_blank" rel="noopener">World Bank &mdash; Urban population (Ireland)</a></li>
+                    <li><a href="https://www.nature.com/articles/s41598-019-46071-7" target="_blank" rel="noopener">White et al. 2019 &mdash; Nature time &amp; wellbeing (Scientific Reports)</a></li>
+                    <li><a href="https://www.arborday.org/trees/treefacts/" target="_blank" rel="noopener">Arbor Day Foundation &mdash; Tree facts</a></li>
+                    <li><a href="https://www.epa.gov/heatislands/benefits-trees-and-vegetation" target="_blank" rel="noopener">US EPA &mdash; Benefits of trees &amp; vegetation</a></li>
+                    <li><a href="https://www.epa.gov/heatislands/using-green-roofs-reduce-heat-islands" target="_blank" rel="noopener">US EPA &mdash; Green roofs &amp; heat islands</a></li>
+                    <li><a href="https://sdgs.un.org/goals/goal11" target="_blank" rel="noopener">SDG 11 &mdash; Sustainable Cities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Group H &mdash; Valentin Gabriel Luchian &amp; Jamie Stackpoole.
+               H6WD Web Design &amp; Development CA2. National College of Ireland.</p>
+        </div>
+    </footer>
+
+    <!-- ===== Mobile Nav Script ===== -->
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('#navLinks');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.classList.toggle('active');
+            const expanded = links.classList.contains('open');
+            toggle.setAttribute('aria-expanded', expanded);
+        });
+    </script>
+</body>
+</html>
