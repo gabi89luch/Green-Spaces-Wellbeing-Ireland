@@ -1,12 +1,379 @@
 /* ============================================================
-   Green Spaces and Wellbeing in Ireland - Stylesheet
+   Green Spaces and Wellbeing in Ireland - Shared Stylesheet
    Topic 8 | SDGs 3 and 11
    Group H | H6WD Web Design & Development CA2
    ------------------------------------------------------------
-   Student: Jamie Stackpoole  (x25130340@student.ncirl.ie)
-   Sections: Info cards grid, benefit items, spotlight grid,
-             embedded content, CTA banner, mobile refinements
+   Student: Valentin Gabriel Luchian  - Base layout, navigation,
+            hero sections, calculator, data table, footer, variables
+   Student: Jamie Stackpoole          - Benefits cards, green spaces
+            grid, get involved page, embeds, responsive tweaks
    ============================================================ */
+
+
+/* ===== Google Fonts Import =====
+   Poppins  - headings
+   Inter    - body text
+   ============================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+
+/* ===== CSS Custom Properties (Variables) =====
+   Written by: Valentin Gabriel Luchian
+   ============================================== */
+:root {
+    /* Primary greens - nature theme */
+    --green-900: #1b4332;
+    --green-700: #2d6a4f;
+    --green-500: #40916c;
+    --green-300: #95d5b2;
+    --green-100: #d8f3dc;
+
+    /* Neutral tones */
+    --dark: #1a2e25;
+    --grey-700: #495057;
+    --grey-500: #6c757d;
+    --grey-300: #dee2e6;
+    --grey-100: #f1f3f5;
+    --white: #ffffff;
+
+    /* Accent */
+    --accent: #ffb703;
+    --accent-dark: #fb8500;
+
+    /* Layout */
+    --max-width: 1100px;
+    --nav-height: 72px;
+
+    /* Typography */
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+    --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    /* Radius */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 20px;
+
+    /* Transition */
+    --transition: 0.25s ease;
+}
+
+
+/* ===== Reset & Base Styles =====
+   Written by: Valentin Gabriel Luchian
+   ==================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--grey-700);
+    background-color: var(--white);
+    line-height: 1.7;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--green-900);
+    line-height: 1.3;
+    font-weight: 600;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.2rem; }
+
+p { margin-bottom: 1rem; }
+
+a {
+    color: var(--green-700);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+a:hover { color: var(--green-500); }
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
+
+li { margin-bottom: 0.4rem; }
+
+
+/* ===== Utility Classes =====
+   Written by: Valentin Gabriel Luchian
+   ================================ */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.text-center { text-align: center; }
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.section {
+    padding: 3.5rem 0;
+}
+
+.section-alt {
+    background-color: var(--green-100);
+}
+
+.lead {
+    font-size: 1.2rem;
+    color: var(--grey-500);
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.sdg-badge {
+    display: inline-block;
+    background: var(--green-700);
+    color: var(--white);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.3rem 0.9rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+}
+
+
+/* ===== Navigation Bar (Flexbox) =====
+   Written by: Valentin Gabriel Luchian
+   ======================================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    border-bottom: 3px solid var(--green-300);
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--nav-height);
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--green-900);
+}
+
+.nav-logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    color: var(--grey-700);
+    font-weight: 500;
+    font-size: 0.98rem;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition);
+}
+
+.nav-links a:hover {
+    background: var(--green-100);
+    color: var(--green-700);
+}
+
+.nav-links a.active {
+    background: var(--green-700);
+    color: var(--white);
+}
+
+/* Hamburger toggle button - hidden on desktop */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: var(--green-900);
+    border-radius: 3px;
+    transition: transform var(--transition), opacity var(--transition);
+}
+
+
+/* ===== Hero Section =====
+   Written by: Valentin Gabriel Luchian
+   =========================== */
+.hero {
+    position: relative;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--green-900), var(--green-700));
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('images/hero-park.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.35;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    padding: 2rem 1.5rem;
+}
+
+.hero h1 {
+    color: var(--white);
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 2rem;
+}
+
+.hero .sdg-badge {
+    background: var(--accent);
+    color: var(--dark);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.btn-primary {
+    background: var(--accent);
+    color: var(--dark);
+    border-color: var(--accent);
+}
+
+.btn-primary:hover {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--green-900);
+    transform: translateY(-2px);
+}
+
+.btn + .btn { margin-left: 0.8rem; }
+
+
+/* ===== Page Banner (inner pages) =====
+   Written by: Valentin Gabriel Luchian
+   ======================================= */
+.page-banner {
+    background: linear-gradient(135deg, var(--green-900), var(--green-500));
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1.5rem 2.5rem;
+}
+
+.page-banner h1 {
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.page-banner p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    max-width: 650px;
+    margin: 0 auto;
+    margin-bottom: 0;
+}
 
 
 /* ===== Info Cards (CSS Grid) =====
@@ -49,7 +416,183 @@
 .card-body p:last-child { margin-bottom: 0; }
 
 
-/* ===== Benefits List =====
+/* ===== Two-Column Layout (Flexbox) =====
+   Written by: Valentin Gabriel Luchian
+   ======================================== */
+.two-col {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.two-col .col {
+    flex: 1;
+}
+
+.two-col img {
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+}
+
+
+/* ===== Data Table =====
+   Written by: Valentin Gabriel Luchian
+   =========================== */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 2rem 0;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+thead {
+    background: var(--green-700);
+    color: var(--white);
+}
+
+th {
+    padding: 1rem;
+    text-align: left;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.3px;
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--grey-300);
+    transition: background var(--transition);
+}
+
+tbody tr:nth-child(even) {
+    background: var(--green-100);
+}
+
+tbody tr:hover {
+    background: var(--green-300);
+}
+
+td {
+    padding: 0.9rem 1rem;
+}
+
+tfoot {
+    background: var(--green-100);
+    font-weight: 600;
+    color: var(--green-900);
+}
+
+tfoot td {
+    border-top: 2px solid var(--green-700);
+}
+
+
+/* ===== Calculator Section =====
+   Written by: Valentin Gabriel Luchian
+   ================================ */
+.calculator-box {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    padding: 2.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.calc-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.calc-form-group label {
+    display: block;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--green-900);
+    margin-bottom: 0.5rem;
+}
+
+.calc-form-group input {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border: 2px solid var(--grey-300);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: border-color var(--transition);
+}
+
+.calc-form-group input:focus {
+    outline: none;
+    border-color: var(--green-500);
+}
+
+.calc-form-group .hint {
+    font-size: 0.85rem;
+    color: var(--grey-500);
+    margin-top: 0.3rem;
+}
+
+.calc-error {
+    color: #d62828;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
+    min-height: 1.2rem;
+}
+
+.calc-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    text-align: center;
+    display: none;
+}
+
+.calc-result.show {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.calc-result.good   { background: var(--green-100); border: 2px solid var(--green-500); }
+.calc-result.okay    { background: #fff3cd; border: 2px solid var(--accent); }
+.calc-result.poor    { background: #f8d7da; border: 2px solid #d62828; }
+
+.calc-result .score {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--green-900);
+    display: block;
+}
+
+.calc-result .rating-label {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.calc-result .tips {
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.calc-result .tips li { margin-bottom: 0.3rem; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ===== Benefits List (Jamie Stackpoole) =====
    Written by: Jamie Stackpoole
    ============================================= */
 .benefit-item {
@@ -71,11 +614,11 @@
     border-radius: var(--radius-sm);
 }
 
-.benefit-item h4 { margin-bottom: 0.3rem; }
+.benefit-item h3 { margin-bottom: 0.3rem; }
 .benefit-item p { margin-bottom: 0; }
 
 
-/* ===== Green Spaces Grid (Spotlight) =====
+/* ===== Green Spaces Grid (Jamie Stackpoole) =====
    Written by: Jamie Stackpoole
    ================================================== */
 .spotlight {
@@ -115,7 +658,37 @@
 }
 
 
-/* ===== Embedded Content =====
+/* ===== Stats Bar =====
+   Written by: Valentin Gabriel Luchian
+   =========================== */
+.stats-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 2.5rem 1.5rem;
+    background: var(--green-700);
+    color: var(--white);
+    text-align: center;
+}
+
+.stat-item { min-width: 150px; }
+
+.stat-item .stat-number {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    color: var(--accent);
+}
+
+.stat-item .stat-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+
+/* ===== Embedded Content (Jamie Stackpoole) =====
    Written by: Jamie Stackpoole
    ================================================= */
 .embed-wrapper {
@@ -178,13 +751,162 @@
 }
 
 
+/* ===== Footer =====
+   Written by: Valentin Gabriel Luchian
+   ==================== */
+.site-footer {
+    margin-top: auto;
+    background: var(--dark);
+    color: rgba(255, 255, 255, 0.7);
+    padding: 2.5rem 1.5rem 1.5rem;
+}
+
+.footer-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.footer-col h3 {
+    color: var(--white);
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.93rem;
+}
+
+.footer-col a:hover {
+    color: var(--green-300);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 2rem;
+    padding-top: 1.2rem;
+    font-size: 0.85rem;
+    max-width: var(--max-width);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ===== Callout / Quote Box =====
+   Written by: Valentin Gabriel Luchian
+   ============================ */
+.callout {
+    background: var(--green-100);
+    border-left: 5px solid var(--green-500);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.callout p { margin-bottom: 0; }
+
+blockquote {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--green-900);
+    text-align: center;
+    max-width: 700px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+blockquote cite {
+    display: block;
+    font-size: 1rem;
+    font-style: normal;
+    color: var(--grey-500);
+    margin-top: 0.5rem;
+}
+
+
 /* ============================================================
    RESPONSIVE DESIGN - Media Queries
-   Written by: Jamie Stackpoole (mobile refinements)
+   ------------------------------------------------------------
+   Written by: Valentin Gabriel Luchian (base breakpoints)
+   Written by: Jamie Stackpoole       (mobile refinements)
    ============================================================ */
 
-/* Mobile - card grid and benefit items */
+/* Tablet and below */
+@media (max-width: 900px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.7rem; }
+
+    .hero h1 { font-size: 2.3rem; }
+
+    .two-col {
+        flex-direction: column;
+        gap: 1.8rem;
+    }
+
+    .stats-bar { gap: 1.5rem; }
+    .stat-item .stat-number { font-size: 2rem; }
+}
+
+/* Mobile - hamburger menu activates */
 @media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: var(--nav-height);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        background: var(--white);
+        box-shadow: var(--shadow-md);
+        padding: 0.5rem 1.5rem 1.5rem;
+        gap: 0;
+        transform: translateY(-150%);
+        transition: transform 0.35s ease;
+        border-bottom: 3px solid var(--green-300);
+    }
+
+    .nav-links.open {
+        transform: translateY(0);
+    }
+
+    .nav-links a {
+        padding: 0.8rem 0.5rem;
+        border-bottom: 1px solid var(--grey-100);
+        border-radius: 0;
+    }
+
+    .nav-links a.active {
+        border-radius: var(--radius-sm);
+    }
+
+    .hero h1 { font-size: 1.9rem; }
+    .hero p  { font-size: 1.05rem; }
+
+    .hero .btn + .btn {
+        margin-left: 0;
+        margin-top: 0.8rem;
+    }
+
+    .section { padding: 2.5rem 0; }
+
+    .calculator-box { padding: 1.5rem; }
+
     .card-grid {
         grid-template-columns: 1fr;
     }
@@ -197,5 +919,71 @@
 
     .benefit-item img {
         margin: 0 auto;
+    }
+
+    table { font-size: 0.85rem; }
+    th, td { padding: 0.6rem 0.5rem; }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.4rem; }
+
+    .hero { min-height: 420px; }
+    .hero h1 { font-size: 1.6rem; }
+
+    .container { padding: 0 1rem; }
+
+    .calc-result .score { font-size: 2.8rem; }
+
+    .btn { padding: 0.7rem 1.5rem; font-size: 0.9rem; }
+
+    .stat-item .stat-number { font-size: 1.8rem; }
+}
+
+
+/* ===== Scroll to Top Button =====
+   Written by: Valentin Gabriel Luchian
+   ================================ */
+.scroll-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: var(--green-700);
+    color: var(--white);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-md);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), background var(--transition), transform var(--transition);
+    z-index: 999;
+}
+
+.scroll-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.scroll-top:hover {
+    background: var(--green-500);
+    transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+    .scroll-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 42px;
+        height: 42px;
+        font-size: 1.3rem;
     }
 }
