@@ -23,8 +23,8 @@ We picked this topic because it's something we both care about - both of us spen
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Valentin Gabriel Luchian | x24318230 | Home, Data & Statistics, Wellbeing Calculator |
-| Jamie Stackpoole | x25130340 | Benefits, Green Spaces, Get Involved |
+| Valentin Gabriel Luchian | 24318230 | Home, Data & Statistics, Wellbeing Calculator |
+| Jamie Stackpoole | 25130340 | Benefits, Green Spaces, Get Involved |
 
 ---
 
@@ -60,18 +60,6 @@ Green-Spaces-Wellbeing-Ireland/
 │   └── scroll-top.js       Back-to-top button behaviour
 ├── images/                 12 Wikimedia Commons WebP photos + 5 custom SVGs
 └── README.md               This file
-```
-
-Documentation and assets (outside the project folder):
-
-```
-parent-folder/
-├── project-report.md       Academic project report
-├── project-report.pdf      Same report as PDF
-├── video-script.md         Script for the 10-min video demo
-├── google-form-setup.md    Guide for embedding the survey
-└── screenshots/            W3C + PageSpeed screenshots and wireframes
-    └── wireframes/         Desktop + mobile wireframes for all 6 pages
 ```
 
 ---
@@ -111,8 +99,6 @@ All photographs are from **Wikimedia Commons** under Creative Commons or Public 
 | Croke Park | Metro Centric (Flickr) | CC BY 2.0 |
 | St Stephen's Green bench | Mrdalton92 | CC BY-SA 4.0 |
 
-Full credits appear on the Get Involved page of the live site and in `project-report.md`.
-
 ---
 
 ## Tech Stack
@@ -127,23 +113,3 @@ Full credits appear on the Get Involved page of the live site and in `project-re
 - No frameworks, no build tools, no dependencies
 
 ---
-
-## Submission Info
-
-| | |
-|---|---|
-| Module | Web Design & Development |
-| Assessment | CA2 Group Project (50%) |
-| Lecturer | Sobia Bano |
-| Submission date | 4 August 2026 |
-| Viva date | 6 August 2026 (in-person, NCI) |
-| ZIP filename | `Luchian_Stackpoole_CA2_2026.zip` |
-
----
-
-## Documentation
-
-- **project-report.md / project-report.pdf** - The full academic project report: page-by-page design rationale, technical implementation, wireframes, W3C and PageSpeed results (live-tested), accessibility analysis, challenges faced and how we solved them, plus full Harvard-format references. This is what gets submitted for grading.
-- **video-script.md** - A scripted walkthrough for the required 10-minute video demo.
-- **google-form-setup.md** - Step-by-step guide for creating the survey form and embedding it in `getinvolved.html`.
-- **screenshots/** - W3C validation screenshots, PageSpeed Insights screenshots, and wireframes for desktop + mobile.
