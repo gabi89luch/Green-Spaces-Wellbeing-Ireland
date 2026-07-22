@@ -14,7 +14,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('wellbeingForm');
 
-    // Only run if the form exists on this page
+    // Only run if calculator form is on this page
     if (!form) return;
 
     const resultBox   = document.getElementById('resultBox');
@@ -68,13 +68,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let valid = true;
 
-        // Read input values via DOM
+        // Grab values from the form
         const weeklyHours = parseFloat(document.getElementById('weeklyHours').value);
         const walkTime    = parseFloat(document.getElementById('walkTime').value);
         const visits      = parseFloat(document.getElementById('visits').value);
         const outdoorDays = parseFloat(document.getElementById('outdoorActivity').value);
 
-        // Validate each input
+        // Check each input is valid
         const h = validateField(weeklyHours, 'weeklyHours', 'errorWeeklyHours', 0, 168);
         if (h === null) valid = false;
 

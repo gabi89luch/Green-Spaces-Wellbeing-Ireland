@@ -1,25 +1,11 @@
-/* ============================================================
-   Green Spaces and Wellbeing in Ireland - Shared Stylesheet
-   Topic 8 | SDGs 3 and 11
-   Group H | Web Design & Development CA2
-   ------------------------------------------------------------
-   Student: Valentin Gabriel Luchian  - Base layout, navigation,
-            hero sections, calculator, data table, footer, variables
-   Student: Jamie Stackpoole          - Benefits cards, green spaces
-            grid, get involved page, embeds, responsive tweaks
-   ============================================================ */
+/* Green Spaces and Wellbeing in Ireland - Shared Stylesheet */
 
 
-/* ===== Google Fonts Import =====
-   Poppins  - headings
-   Inter    - body text
-   ============================== */
+/* Google Fonts - Poppins (headings), Inter (body) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
 
 
-/* ===== CSS Custom Properties (Variables) =====
-   Written by: Valentin Gabriel Luchian
-   ============================================== */
+/* CSS variables - Valentin */
 :root {
     /* Primary greens - nature theme */
     --green-900: #1b4332;
@@ -63,9 +49,8 @@
 }
 
 
-/* ===== Reset & Base Styles =====
-   Written by: Valentin Gabriel Luchian
-   ==================================== */
+/* Reset & base */
+/* Written by: Valentin Gabriel Luchian */
 *,
 *::before,
 *::after {
@@ -133,9 +118,8 @@ ul, ol { margin-bottom: 1rem; padding-left: 1.5rem; }
 li { margin-bottom: 0.4rem; }
 
 
-/* ===== Utility Classes =====
-   Written by: Valentin Gabriel Luchian
-   ================================ */
+/* Utilities */
+/* Written by: Valentin Gabriel Luchian */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -185,9 +169,8 @@ li { margin-bottom: 0.4rem; }
 }
 
 
-/* ===== Navigation Bar (Flexbox) =====
-   Written by: Valentin Gabriel Luchian
-   ======================================= */
+/* Nav bar */
+/* Written by: Valentin Gabriel Luchian */
 .site-header {
     position: sticky;
     top: 0;
@@ -273,9 +256,8 @@ li { margin-bottom: 0.4rem; }
 }
 
 
-/* ===== Hero Section =====
-   Written by: Valentin Gabriel Luchian
-   =========================== */
+/* Hero */
+/* Written by: Valentin Gabriel Luchian */
 .hero {
     position: relative;
     min-height: 520px;
@@ -363,9 +345,8 @@ li { margin-bottom: 0.4rem; }
 .btn + .btn { margin-left: 0.8rem; }
 
 
-/* ===== Page Banner (inner pages) =====
-   Written by: Valentin Gabriel Luchian
-   ======================================= */
+/* Page banner */
+/* Written by: Valentin Gabriel Luchian */
 .page-banner {
     background: linear-gradient(135deg, var(--green-900), var(--green-500));
     color: var(--white);
@@ -387,9 +368,8 @@ li { margin-bottom: 0.4rem; }
 }
 
 
-/* ===== Info Cards (CSS Grid) =====
-   Written by: Jamie Stackpoole
-   =================================== */
+/* Cards (CSS Grid) */
+/* Written by: Jamie Stackpoole */
 .card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -427,9 +407,8 @@ li { margin-bottom: 0.4rem; }
 .card-body p:last-child { margin-bottom: 0; }
 
 
-/* ===== Two-Column Layout (Flexbox) =====
-   Written by: Valentin Gabriel Luchian
-   ======================================== */
+/* Two-column */
+/* Written by: Valentin Gabriel Luchian */
 .two-col {
     display: flex;
     gap: 3rem;
@@ -446,9 +425,8 @@ li { margin-bottom: 0.4rem; }
 }
 
 
-/* ===== Data Table =====
-   Written by: Valentin Gabriel Luchian
-   =========================== */
+/* Data tables */
+/* Written by: Valentin Gabriel Luchian */
 .table-wrapper {
     overflow-x: auto;
 }
@@ -459,10 +437,6 @@ li { margin-bottom: 0.4rem; }
     padding: 0.8rem 1rem;
     font-family: var(--font-heading);
     color: var(--green-900);
-}
-    margin: 2rem 0;
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
 }
 
 table {
@@ -513,9 +487,8 @@ tfoot td {
 }
 
 
-/* ===== Calculator Section =====
-   Written by: Valentin Gabriel Luchian
-   ================================ */
+/* Calculator */
+/* Written by: Valentin Gabriel Luchian */
 .calculator-box {
     background: var(--white);
     border-radius: var(--radius-lg);
@@ -612,9 +585,8 @@ tfoot td {
 }
 
 
-/* ===== Benefits List (Jamie Stackpoole) =====
-   Written by: Jamie Stackpoole
-   ============================================= */
+/* Benefits list - Jamie */
+/* Written by: Jamie Stackpoole */
 .benefit-item {
     display: flex;
     align-items: flex-start;
@@ -638,9 +610,8 @@ tfoot td {
 .benefit-item p { margin-bottom: 0; }
 
 
-/* ===== Green Spaces Grid (Jamie Stackpoole) =====
-   Written by: Jamie Stackpoole
-   ================================================== */
+/* Green spaces grid - Jamie */
+/* Written by: Jamie Stackpoole */
 .spotlight {
     background: var(--white);
     border-radius: var(--radius-md);
@@ -678,9 +649,8 @@ tfoot td {
 }
 
 
-/* ===== Stats Bar =====
-   Written by: Valentin Gabriel Luchian
-   =========================== */
+/* Stats bar */
+/* Written by: Valentin Gabriel Luchian */
 .stats-bar {
     display: flex;
     flex-wrap: wrap;
@@ -714,9 +684,8 @@ tfoot td {
 }
 
 
-/* ===== Embedded Content (Jamie Stackpoole) =====
-   Written by: Jamie Stackpoole
-   ================================================= */
+/* Embeds - Jamie */
+/* Written by: Jamie Stackpoole */
 .embed-wrapper {
     position: relative;
     width: 100%;
@@ -753,9 +722,8 @@ tfoot td {
 }
 
 
-/* ===== Call to Action Banner =====
-   Written by: Jamie Stackpoole
-   =============================== */
+/* CTA banner */
+/* Written by: Jamie Stackpoole */
 .cta-banner {
     background: linear-gradient(135deg, var(--green-700), var(--green-500));
     color: var(--white);
@@ -777,9 +745,8 @@ tfoot td {
 }
 
 
-/* ===== Footer =====
-   Written by: Valentin Gabriel Luchian
-   ==================== */
+/* Footer */
+/* Written by: Valentin Gabriel Luchian */
 .site-footer {
     margin-top: auto;
     background: var(--dark);
@@ -829,9 +796,8 @@ tfoot td {
 }
 
 
-/* ===== Callout / Quote Box =====
-   Written by: Valentin Gabriel Luchian
-   ============================ */
+/* Callout / Quote Box */
+/* Written by: Valentin Gabriel Luchian */
 .callout {
     background: var(--green-100);
     border-left: 5px solid var(--green-500);
@@ -862,12 +828,7 @@ blockquote cite {
 }
 
 
-/* ============================================================
-   RESPONSIVE DESIGN - Media Queries
-   ------------------------------------------------------------
-   Written by: Valentin Gabriel Luchian (base breakpoints)
-   Written by: Jamie Stackpoole       (mobile refinements)
-   ============================================================ */
+/* Responsive - Valentin & Jamie */
 
 /* Tablet and below */
 @media (max-width: 900px) {
@@ -969,9 +930,8 @@ blockquote cite {
 }
 
 
-/* ===== Scroll to Top Button =====
-   Written by: Valentin Gabriel Luchian
-   ================================ */
+/* Scroll to Top Button */
+/* Written by: Valentin Gabriel Luchian */
 .scroll-top {
     position: fixed;
     bottom: 2rem;

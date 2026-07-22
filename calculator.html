@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-  File: calculator.html
-  Page: Green Wellbeing Score Calculator
-  Student: Valentin Gabriel Luchian  (x24318230@student.ncirl.ie)
-  Topic 8 - Green Spaces and Wellbeing in Ireland (SDGs 3 & 11)
-  Group H
-  Shared calculator for the group (DOM-based JavaScript)
+<!-- calculator.html - Green Wellbeing Score Calculator
+by Valentin Gabriel Luchian  (x24318230@student.ncirl.ie)
 -->
 <head>
     <meta charset="UTF-8">
@@ -21,7 +16,7 @@
 </head>
 <body>
 
-    <!-- ===== Navigation ===== -->
+    <!-- Nav -->
     <header class="site-header">
         <nav class="nav-bar" aria-label="Main navigation">
             <a href="index.html" class="nav-logo">
@@ -44,7 +39,7 @@
         </nav>
     </header>
 
-    <!-- ===== Page Banner ===== -->
+    <!-- Page banner -->
     <section class="page-banner">
         <span class="sdg-badge">SDG 3 &amp; SDG 11</span>
         <h1>Green Wellbeing Score Calculator</h1>
@@ -62,10 +57,10 @@
                 runs in your browser.
             </p>
 
-            <!-- ===== Calculator Box ===== -->
+            <!-- Calculator -->
             <div class="calculator-box">
                 <form id="wellbeingForm" novalidate>
-                    <!-- Input 1 -->
+                    
                     <div class="calc-form-group">
                         <label for="weeklyHours">1. How many hours per week do you spend
                             in green spaces (parks, gardens, trails)?</label>
@@ -75,7 +70,7 @@
                         <p class="calc-error" id="errorWeeklyHours"></p>
                     </div>
 
-                    <!-- Input 2 -->
+                    
                     <div class="calc-form-group">
                         <label for="walkTime">2. How many minutes does it take to walk
                             from your home to the nearest green space?</label>
@@ -85,7 +80,7 @@
                         <p class="calc-error" id="errorWalkTime"></p>
                     </div>
 
-                    <!-- Input 3 -->
+                    
                     <div class="calc-form-group">
                         <label for="visits">3. How many times per month do you visit
                             a park, garden or natural green area?</label>
@@ -95,7 +90,7 @@
                         <p class="calc-error" id="errorVisits"></p>
                     </div>
 
-                    <!-- Input 4 -->
+                    
                     <div class="calc-form-group">
                         <label for="outdoorActivity">4. How many days per week do you do
                             outdoor physical activity (walking, running, cycling)?</label>
@@ -114,7 +109,7 @@
                     </div>
                 </form>
 
-                <!-- ===== Result (written by JS) ===== -->
+                <!-- Result (written by JS) -->
                 <div class="calc-result" id="resultBox">
                     <span class="score" id="resultScore">0</span>
                     <p class="rating-label" id="resultLabel"></p>
@@ -123,7 +118,7 @@
                 </div>
             </div>
 
-            <!-- ===== How it works ===== -->
+            <!-- How it works -->
             <h2 style="margin-top: 3rem;" class="text-center">How the Score Works</h2>
             <p class="lead text-center">
                 We take your four answers and weight them to get a score out of 100.
@@ -176,7 +171,7 @@
         </div>
     </section>
 
-    <!-- ===== CTA ===== -->
+    <!-- CTA -->
     <section class="section section-alt">
         <div class="container">
             <div class="cta-banner">
@@ -190,10 +185,10 @@
     </section>
     </main>
 
-    <!-- ===== Scroll to Top Button ===== -->
+    <!-- Scroll to top -->
     <button class="scroll-top" id="scrollTop" aria-label="Scroll back to top">&uarr;</button>
 
-    <!-- ===== Footer ===== -->
+    <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-grid">
             <div class="footer-col">
@@ -230,7 +225,7 @@
         </div>
     </footer>
 
-    <!-- ===== Mobile Nav Script ===== -->
+    <!-- Mobile nav script -->
     <script>
         const toggle = document.querySelector('.nav-toggle');
         const links = document.querySelector('#navLinks');
@@ -242,7 +237,7 @@ toggle.setAttribute('aria-expanded', expanded);
     });
 </script>
 
-    <!-- ===== Calculator Logic ===== -->
+    <!-- Calculator logic -->
     <script src="js/calculator.js"></script>
 </body>
 </html>
