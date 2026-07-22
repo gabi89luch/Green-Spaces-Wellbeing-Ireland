@@ -8,7 +8,6 @@
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://validator.w3.org/)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://jigsaw.w3.org/css-validator/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![License](https://img.shields.io/badge/License-MIT-blue?style=flat)]()
 [![W3C Validated](https://img.shields.io/badge/W3C-0%20Errors-brightgreen?style=flat)]()
 
 ---
