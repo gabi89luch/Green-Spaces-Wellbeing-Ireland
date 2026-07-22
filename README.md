@@ -44,8 +44,8 @@ We picked this topic because it's something we both care about — both of us ha
 
 | Name | Student ID | Role |
 |------|-----------|------|
-| Valentin Gabriel Luchian | x24318230 | Home, Data & Statistics, Wellbeing Calculator |
-| Jamie Stackpoole | x25130340 | Benefits, Green Spaces, Get Involved |
+| Valentin Gabriel Luchian | 24318230 | Home, Data & Statistics, Wellbeing Calculator |
+| Jamie Stackpoole | 25130340 | Benefits, Green Spaces, Get Involved |
 
 ### Task Breakdown
 
