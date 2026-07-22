@@ -4,7 +4,7 @@ A multi-page website exploring how green spaces across Ireland affect our health
 
 **Topic 8** | **UN SDGs 3 & 11** | **Group H**
 
-**Live site:** https://gabi89luch.github.io/Green-Spaces-Wellbeing-Ireland/
+**Live site:** https://gabi89luch.github.io/green-spaces-ireland/
 
 ---
 
@@ -76,7 +76,7 @@ python3 -m http.server 8000
 Then go to http://localhost:8000 in your browser.
 
 ### GitHub Pages
-Deployed and live at: https://gabi89luch.github.io/Green-Spaces-Wellbeing-Ireland/
+Deployed and live at: https://gabi89luch.github.io/green-spaces-ireland/
 
 ---
 
